@@ -107,10 +107,19 @@ header{
   letter-spacing: 2px;
 }
 
+
+#work{
+  background-color: white;
+  text-align: center;
+  color: #fff;
+  padding: 70px 7px;
+}
 footer{
   text-align: center;
   height: 70px;
   background: #373B47;
   color: white;
   padding-top: 7px;
+  float: right;
+  width: 100%;
 }
