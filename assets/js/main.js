@@ -2,15 +2,15 @@
  * Archivo principal de funcionalidad de JS
  */
 var escucharEventos = document.getElementsByClassName('col-4');
-var pictures = ["assets/imgages/img-1.jpg",
-				"assets/imgages/img-2.jpg",
-				"assets/imgages/img-3.jpg",
-				"assets/imgages/img-4.jpg",
-				"assets/imgages/img-5.jpg",
-				"assets/imgages/img-6.jpg",
-				"assets/imgages/img-7.jpg",
-				"assets/imgages/img-8.jpg",
-				"assets/imgages/img-9.jpg",
+var pictures = ["assets/images/img-1.jpg",
+				"assets/images/img-2.jpg",
+				"assets/images/img-3.jpg",
+				"assets/images/img-4.jpg",
+				"assets/images/img-5.jpg",
+				"assets/images/img-6.jpg",
+				"assets/images/img-7.jpg",
+				"assets/images/img-8.jpg",
+				"assets/images/img-9.jpg",
 				];
 var idImagenes =["img-1",
 				"img-2",
@@ -22,15 +22,31 @@ var idImagenes =["img-1",
 				"img-8",
 				"img-9"]
 
-
-
  for (var i = 0; i < idImagenes.length; i++) {
- 		var unicornio = document.getElementById(idImagenes[i]);
+ 		var eventoClick = document.getElementById(idImagenes[i]);
 
- 			unicornio.addEventListener('click',crearImagenes);
+ 			eventoClick.addEventListener('click',crearImagenes);
+ 		}
+ var lol = document.querySelector('body');
+  function crearImagenes(){
+  	alert("si funciono");
+				for (var i = 0; i < pictures.length; i++) {
+				 	var divEmergente = document.createElement('div');
+						divEmergente.setAttribute('id','divEmergente');
+				 	var myImg = document.createElement('img');
+				 		myImg.src = pictures[i];
+				 		myImg.setAttribute ('class','editar-pandas')
+				 	var myBtn = document.createElement('button');
+				 		myBtn.setAttribute ('class','btn');
+				 		myBtn.setAttribute('onclick', 'eliminar(this)')
+					var b = document.createTextNode('X');
+				 		myBtn.appendChild(b);
+					 	divEmergente.appendChild(myBtn);
+					 	divEmergente.appendChild(myImg);
+					 	lol.appendChild(divEmergente);
+			 }
  }
-console.log(idImagenes[i]);
- function crearImagenes(){
- 	alert("ya funciona");
-	var lol = document.querySelector('body');
+
+ function eliminar(event) {
+ 	event.parentNode.style.display = "none";
  }
