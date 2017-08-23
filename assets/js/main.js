@@ -50,3 +50,13 @@ var idImagenes =["img-1",
  function eliminar(event) {
  	event.parentNode.style.display = "none";
  }
+
+ /*codigo funcional*/
+ var div = document.getElementById('divProducto');
+ var imagen = document.getElementById('imagenDiv');
+ var btnDiv = document.getElementById('btnEliminar');
+ btnDiv.addEventListener('click',crearDiv);
+
+ function crearDiv(){
+ 	div.style.display = "block";
+ }
