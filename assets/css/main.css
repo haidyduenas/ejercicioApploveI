@@ -58,7 +58,14 @@ header{
   padding: 14px 70px;
   overflow: auto;
 }
-
+.flex{
+  display:flex;
+}
+.flex img{
+  flex-wrap:nowrap;
+  justify-content: space-around;
+  width: 45%;
+}
 #home{
   background-image: url(../images/bg-home.jpg); /* Nuestra imagen de portada*/
   background-position: center;/*Posicionar nuestra imagen al centro*/
@@ -97,7 +104,6 @@ header{
 }
 
 .box-services {
-  display: inline-block;
   width: 30%;
   margin-top: 63px;
 }
@@ -114,7 +120,17 @@ header{
   color: #fff;
   padding: 70px 7px;
 }
+.row{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
+}
+.col-4{
+  width: 30%;
+  height: 30%;
+  border: 10px solid;
+}
  .modal{
   margin: 0 auto;
   position: fixed;
@@ -145,7 +161,7 @@ header{
   right: 270px;
   top: 20px;
   font-size: 35px;
-  cursor: pointer;    
+  cursor: pointer;
 }
 
 footer{
